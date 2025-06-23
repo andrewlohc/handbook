@@ -98,12 +98,61 @@ flowchart LR
     class API externalStyle
 ```
 
+## Lineage/Process Flow Diagrams
+
+For sequential processes with hierarchical detail tasks, use the lineage pattern:
+
+### Design Pattern
+- **Main timeline**: Horizontal flow with numbered phases
+- **Branches**: Vertical branches from each main phase
+- **Numbering**: Use "1 - ", "2 - " format to avoid markdown conflicts
+- **Hierarchy**: Two levels maximum for clarity
+
+### Styling Classes
+```mermaid
+classDef mainPhase fill:#6c757d,stroke:#495057,stroke-width:2px,color:#ffffff,font-weight:bold,font-size:14px
+classDef subTask fill:#f8f9fa,stroke:#495057,stroke-width:1px,color:#212529,font-weight:normal,font-size:12px
+```
+
+### Template
+```mermaid
+flowchart LR
+    %% Main Timeline
+    A["1 - Phase One<br/>Primary objective"] --> B["2 - Phase Two<br/>Secondary objective"] --> C["3 - Phase Three<br/>Final objective"]
+    
+    %% Branches from each phase
+    A --> A1["Sub-task A1<br/>Specific action"]
+    A --> A2["Sub-task A2<br/>Specific action"]
+    
+    B --> B1["Sub-task B1<br/>Specific action"]
+    B --> B2["Sub-task B2<br/>Specific action"]
+    
+    C --> C1["Sub-task C1<br/>Specific action"]
+    C --> C2["Sub-task C2<br/>Specific action"]
+    
+    %% Corporate Styling Classes
+    classDef mainPhase fill:#6c757d,stroke:#495057,stroke-width:2px,color:#ffffff,font-weight:bold,font-size:14px
+    classDef subTask fill:#f8f9fa,stroke:#495057,stroke-width:1px,color:#212529,font-weight:normal,font-size:12px
+    
+    %% Apply Styling
+    class A,B,C mainPhase
+    class A1,A2,B1,B2,C1,C2 subTask
+```
+
+### Best Practices
+- Keep branches to 2-5 items per main phase
+- Use consistent labeling: "Primary Name<br/>Description"
+- Avoid deep nesting (max 2 levels)
+- Maintain visual balance across branches
+
 ## Use Cases
 - System architecture diagrams
 - Business process flows
 - Data flow documentation
 - API integration diagrams
 - Executive presentations
+- **Process evaluation workflows**
+- **Sequential task breakdowns**
 
 ## Checklist
 
