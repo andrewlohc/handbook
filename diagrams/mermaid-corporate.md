@@ -6,16 +6,18 @@ This style guide establishes standardized visual conventions for creating profes
 
 ## Table of Contents
 1. [Design Principles](#design-principles)
-2. [Configuration](#configuration)
-3. [Labeling](#labeling)
-4. [Layout](#layout)
-5. [System Architecture Diagrams](#system-architecture-diagrams)
-6. [System Component Flow Diagrams](#system-component-flow-diagrams)
-7. [Lineage/Process Flow Diagrams](#lineageprocess-flow-diagrams)
-8. [System Integration Sequence Diagrams](#system-integration-sequence-diagrams)
-9. [Project Management Gantt Charts](#project-management-gantt-charts)
-10. [Strategic Analysis Quadrant Charts](#strategic-analysis-quadrant-charts)
-11. [References](#references)
+2. [AI System Guidelines](#ai-system-guidelines)
+3. [Configuration](#configuration)
+4. [Labeling](#labeling)
+5. [Layout](#layout)
+6. Diagrams
+   1. [System Architecture Diagrams](#system-architecture-diagrams)
+   2. [System Component Flow Diagrams](#system-component-flow-diagrams)
+   3. [Lineage/Process Flow Diagrams](#lineageprocess-flow-diagrams)
+   4. [System Integration Sequence Diagrams](#system-integration-sequence-diagrams)
+   5. [Project Management Gantt Charts](#project-management-gantt-charts)
+   6. [Strategic Analysis Quadrant Charts](#strategic-analysis-quadrant-charts)
+7. [References](#references)
 
 ## Design Principles
 - Form follows function
@@ -45,6 +47,59 @@ The style guide supports comprehensive enterprise documentation needs:
 ### Design Philosophy
 
 Built on the principle that form follows function, this approach prioritizes information clarity over decorative elements. The neutral color palette and consistent typography ensure diagrams remain readable in various contexts, from printed reports to digital presentations, while maintaining professional credibility across all organizational levels.
+
+## AI System Guidelines
+
+When asked to "format documentation to this style" or "apply this style guide":
+
+### Assessment Protocol
+**ALWAYS assess first:**
+1. **Purpose**: Does the existing content require visualization to be understood?
+2. **Complexity**: Are there multiple interconnected concepts that would benefit from visual representation?
+3. **User Intent**: Did the user explicitly request diagrams, or are they asking for formatting/styling?
+
+### When to Create Diagrams
+
+**Create diagrams ONLY when:**
+- The user explicitly requests diagram creation
+- Content contains complex workflows, system architectures, or process flows that would genuinely benefit from visualization
+- Visualizing complex processes with 3+ steps or decision points
+- Showing relationships between multiple systems or components
+- Presenting workflows to stakeholders who need visual context
+- Documenting technical architecture with interconnected services
+- Illustrating data flow or process sequences that are difficult to describe in text
+- Creating executive summaries that require high-level visual overviews
+
+**DO NOT create diagrams for:**
+- Simple concepts that are clearer as text (e.g., single-step processes)
+- Formatting existing clear documentation that doesn't need visualization
+- Adding decorative visual elements to content
+- Replacing well-written prose with unnecessary flowcharts
+- Creating diagrams when the text explanation is already sufficient
+- Documentation where diagrams would add complexity rather than clarity
+
+### Decision Framework
+Before creating a diagram, ask:
+1. **Complexity**: Does this concept have multiple interconnected parts?
+2. **Audience**: Would stakeholders benefit from visual representation?
+3. **Clarity**: Does a diagram make this concept easier to understand?
+4. **Value**: Does the diagram serve a functional purpose beyond decoration?
+
+If the answer to most questions is "no," stick to well-formatted text.
+
+### Application Rules
+**Default behavior**: Apply only the design principles (neutral theme, clean formatting, consistent typography) WITHOUT generating visual content.
+
+### Reference Usage
+**The examples in sections 6-11 are reference implementations, NOT templates to automatically apply:**
+- Use them as guidance when diagram creation is appropriate
+- Do not default to generating diagrams based on these examples
+- Ask clarifying questions if the user's intent is unclear
+
+### Recommended Responses
+Instead of immediately generating diagrams, consider responses like:
+- "I can apply the neutral theme and formatting principles. Would you also like me to create diagrams for any specific processes or systems?"
+- "This content could benefit from [specific diagram type]. Should I create one, or would you prefer just the text formatting?"
 
 ## Configuration
 
@@ -105,7 +160,7 @@ Mermaid architecture diagrams support multiple icon sources:
 - Material Design: `mdi:[icon-name]`
 - Technology logos: `logos:[technology-name]`
 
-### Template
+### Reference Implementation
 ```mermaid
 ---
 config:
@@ -183,7 +238,7 @@ flowchart LR
     class C externalStyle
 ```
 
-### Template
+### Reference Implementation
 ```mermaid
 ---
 config:
@@ -253,7 +308,7 @@ flowchart LR
     class A1 subTask
 ```
 
-### Template
+### Reference Implementation
 ```mermaid
 ---
 config:
@@ -295,7 +350,7 @@ For API workflows and service interactions with temporal flow:
 - **Activation**: Show service processing time with +/-
 - **Notes**: Contextual information for complex workflows
 
-### Template
+### Reference Implementation
 ```mermaid
 ---
 config:
@@ -331,7 +386,7 @@ For project timelines and milestone tracking:
 - **Dependencies**: Sequential task relationships
 - **Professional dates**: Clear YYYY-MM-DD format
 
-### Template
+### Reference Implementation
 ```mermaid
 ---
 config:
@@ -367,7 +422,7 @@ For portfolio analysis and strategic decision-making:
 - **Data plotting**: Precise coordinate positioning for analysis items
 - **Professional titles**: Business-focused axis and chart titles
 
-### Template
+### Reference Implementation
 ```mermaid
 ---
 config:
